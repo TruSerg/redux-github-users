@@ -1,0 +1,36 @@
+.startSearchWrapper {
+  display: flex;
+  align-items: center;
+  min-height: 696px;
+  background-color: #E5E5E5;
+}
+
+.startSearchBody {
+  margin: 0 auto;
+  max-width: 210px;
+  height: 200px;
+  text-align: center;
+}
+
+.startSearchIcon {
+  fill: #808080;
+  width: 66px;
+  height: 66px;
+  margin-bottom: 47px;
+}
+
+.startSearchText {
+  font-size: 22px;
+  color: #808080;
+}
+
+@media (max-width: 490px) {
+  .startSearchIcon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .startSearchText {
+    font-size: 18px;
+  }
+}

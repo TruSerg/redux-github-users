@@ -1,0 +1,34 @@
+.UserNotFoundWrapper {
+  display: flex;
+  align-items: center;
+  min-height: 696px;
+  background-color: #E5E5E5;
+}
+
+.userNotFoundBody {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.userNotFoundIcon {
+  fill: #808080;
+  width: 65px;
+  height: 75px;
+  margin-bottom: 42px;
+}
+
+.userNotFoundText {
+  font-size: 22px;
+  color: #808080;
+}
+
+@media (max-width: 490px) {
+  .userNotFoundIcon {
+    width: 45px;
+    height: 55px;
+  }
+
+  .userNotFoundText {
+    font-size: 18px;
+  }
+}

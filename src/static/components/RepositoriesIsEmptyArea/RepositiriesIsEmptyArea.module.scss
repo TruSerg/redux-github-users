@@ -1,0 +1,39 @@
+.reposIsEmptyWrapper {
+  display: flex;
+  align-items: center;
+  min-height: 550px;
+  background-color: #E5E5E5;
+}
+
+.reposIsEmptyBody {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reposIsEmptyIcon {
+  fill: #808080;
+  width: 76px;
+  height: 62px;
+  margin-bottom: 62px;
+}
+
+.reposIsEmptyText {
+  font-size: 22px;
+  color: #808080;
+}
+
+@media (max-width: 490px) {
+  .reposIsEmptyWrapper {
+    min-height: 250px;
+  }
+
+  .reposIsEmptyIcon {
+    width: 56px;
+    height: 42px;
+    margin-bottom: 42px;
+  }
+
+  .reposIsEmptyText {
+    font-size: 18px;
+  }
+}
