@@ -1,0 +1,48 @@
+.form {
+  position: relative
+}
+
+.formIcon {
+  position: absolute;
+  fill: #808080;
+  width: 14px;
+  height: 14px;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.formInput {
+  min-width: 500px;
+  min-height: 40px;
+  border-radius: 6px;
+  margin-left: 22px;
+  padding: 8px 44px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #808080;
+}
+
+@media (max-width: 880px) {
+  .formInput {
+    min-width: 450px;
+  }
+}
+
+@media (max-width: 590px) {
+  .formInput {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 490px) {
+  .formIcon {
+    left: 35px;
+  }
+
+  .formInput {
+    max-width: 350px;
+    min-width: 0;
+    padding: 8px 8px 8px 35px;
+  }
+}
