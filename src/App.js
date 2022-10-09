@@ -1,12 +1,11 @@
-import Loader from "./components/Loader/Loader";
 import Header from "./components/Header/Header";
+import UserData from "./components/UserData/UserData";
 
 const App = () => {
   return (
     <div>
       <Header />
-      <Loader />
-      <h1>Hello world!</h1>
+      <UserData />
     </div>
   );
 };

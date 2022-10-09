@@ -1,0 +1,104 @@
+.userWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.userImg {
+  border-radius: 50%;
+  display: block;
+  max-width: 280px;
+  height: auto;
+  margin-bottom: 29px;
+}
+
+.userName {
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 2px;
+}
+
+.userLogin {
+  font-size: 18px;
+  color: #0064EB;
+  margin-bottom: 15.5px;
+  padding: 10px 0;
+  transition: fill 0.3s linear;
+
+  &:hover {
+    color: #05438b
+  }
+}
+
+.userSocial {
+  display: flex;
+  align-items: center;
+}
+
+.userFollowersIcon {
+  fill: #808080;
+  width: 23px;
+  height: 15px;
+  margin-right: 12px;
+}
+
+.userfollowing {
+  margin-left: 20px
+}
+
+.userFollowingIcon {
+  fill: #808080;
+  width: 17px;
+  height: 17px;
+  margin-right: 12px;
+}
+
+// ===== Media =====
+
+@media (max-width: 1090px) {
+  .userSocial {
+    display: block;
+  }
+
+  .userFollowers {
+    margin-bottom: 10px;
+  }
+
+  .userfollowing {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 880px) {
+  .userWrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .userImg {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 590px) {
+  .userImg {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 490px) {
+  .userWrapper {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .userImg {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .userName {
+    font-size: 24px;
+  }
+}
