@@ -1,0 +1,94 @@
+.reposWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 30px;
+}
+
+.reposTitle {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 29px;
+}
+
+.userRepo {
+  max-width: 877px;
+  width: 100%;
+  min-height: 112px;
+  word-wrap: break-word;
+  padding: 14px 32px 24px 32px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  background-color: #fff;
+}
+
+.repoName {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 6px;
+  color: #0064EB;
+  padding: 10px 0;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #05438b;
+  }
+}
+
+.repoDescription {
+  line-height: 19px;
+  font-size: 16px;
+}
+
+.paginationArea {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.paginationData {
+  font-size: 14px;
+  color: #808080;
+}
+
+// ===== Media =====
+
+@media (max-width: 880px) {
+  .reposWrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .userRepo {
+    width: 100%;
+  }
+
+  .paginationArea {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .paginationData {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 490px) {
+  .reposTitle {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .userRepo {
+    min-height: 80px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .repoName {
+    font-size: 21px;
+  }
+}

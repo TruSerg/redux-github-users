@@ -5,8 +5,19 @@ import UserDataLayout from "./UserDataLayout";
 const UserData = () => {
   const { userData, error, isLoading } = useSelector((state) => state.userData);
 
+  const { avatar_url, name, html_url, login, followers, following } = userData;
+
   return (
-    <UserDataLayout userData={userData} error={error} isLoading={isLoading} />
+    <UserDataLayout
+      avatarUrl={avatar_url}
+      name={name}
+      htmlUrl={html_url}
+      login={login}
+      followers={followers}
+      following={following}
+      error={error}
+      isLoading={isLoading}
+    />
   );
 };
 
