@@ -4,8 +4,12 @@ import { URI_API } from "../const/const";
 
 export const fetchUserRepos = createAsyncThunk(
   "userRepos/fetchUserRepos",
-  async (userLogin) => {
-    const res = await fetch(`${URI_API}/users/${userLogin}/repos`);
+  async (user) => {
+    const [userLogin, reposPerPage, currentPage] = user;
+
+    const res = await fetch(
+      `${URI_API}/users/${userLogin}/repos?per_page=${reposPerPage}&page=${currentPage}`
+    );
     const data = res.json();
     return data;
   }

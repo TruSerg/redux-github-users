@@ -4,7 +4,7 @@ import Form from "./Form/Form";
 import style from "./Header.module.scss";
 import sprite from "../../static/sprite.svg";
 
-const HeaderLayout = () => {
+const HeaderLayout = ({ currentPage, reposPerPage }) => {
   return (
     <header className={style.header}>
       <Container>
@@ -14,7 +14,7 @@ const HeaderLayout = () => {
               <use href={sprite + "#i-git"} />
             </svg>
           </a>
-          <Form />
+          <Form currentPage={currentPage} reposPerPage={reposPerPage} />
         </div>
       </Container>
     </header>

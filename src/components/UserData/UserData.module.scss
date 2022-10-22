@@ -1,5 +1,20 @@
 .userWrapper {
   display: flex;
+  justify-content: space-between;
+  background-color: #E5E5E5;
+  padding-top: 28px;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.userArea {
+  display: flex;
   flex-direction: column;
 }
 
