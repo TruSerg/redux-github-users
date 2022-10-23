@@ -1,14 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
 import UserReposLayout from "./UserReposLayout";
-import { useEffect } from "react";
 import { fetchUserRepos } from "../../store/userReposSlice";
 
-const UserRepos = ({ currentPage, setCurrentPage, reposPerPage }) => {
+const UserRepos = () => {
   const dispatch = useDispatch();
 
-  const { userReposList } = useSelector((state) => state.userRepos);
+  const { userReposList, isLoading } = useSelector((state) => state.userRepos);
   const { userData } = useSelector((state) => state.userData);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [reposPerPage] = useState(4);
 
   const { public_repos, login } = userData;
 
@@ -27,8 +30,8 @@ const UserRepos = ({ currentPage, setCurrentPage, reposPerPage }) => {
   return (
     <UserReposLayout
       userReposList={userReposList}
+      isLoading={isLoading}
       repos={public_repos}
-      currentPage={currentPage}
       setCurrentPage={setCurrentPage}
       indexOfFirstRepo={indexOfFirstRepo}
       currentQuantityRepos={currentQuantityRepos}

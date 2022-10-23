@@ -4,14 +4,16 @@ import { URI_API } from "../const/const";
 
 export const fetchUserRepos = createAsyncThunk(
   "userRepos/fetchUserRepos",
-  async (user) => {
-    const [userLogin, reposPerPage, currentPage] = user;
-
-    const res = await fetch(
-      `${URI_API}/users/${userLogin}/repos?per_page=${reposPerPage}&page=${currentPage}`
-    );
-    const data = res.json();
-    return data;
+  async ([userLogin, reposPerPage, currentPage], { rejectedWithValue }) => {
+    try {
+      const res = await fetch(
+        `${URI_API}/users/${userLogin}/repos?per_page=${reposPerPage}&page=${currentPage}`
+      );
+      const data = res.json();
+      return data;
+    } catch (error) {
+      return rejectedWithValue(error.message);
+    }
   }
 );
 
@@ -19,6 +21,7 @@ const userReposSlice = createSlice({
   name: "userRepos",
   initialState: {
     userReposList: [],
+    error: null,
     isLoading: false,
   },
 
@@ -30,8 +33,9 @@ const userReposSlice = createSlice({
       state.userReposList = payload;
       state.isLoading = false;
     },
-    [fetchUserRepos.rejected]: (state) => {
+    [fetchUserRepos.rejected]: (state, { payload }) => {
       state.isLoading = false;
+      state.error = payload;
     },
   },
 });

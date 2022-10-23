@@ -1,12 +1,17 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
 import { URI_API } from "../const/const";
 
 export const fetchUserData = createAsyncThunk(
   "userData/fetchUserData",
-  async (inputValue) => {
-    const res = await fetch(`${URI_API}/users/${inputValue}`);
-    const data = res.json();
-    return data;
+  async (inputValue, { rejectedWithValue }) => {
+    try {
+      const res = await fetch(`${URI_API}/users/${inputValue}`);
+      const data = res.json();
+      return data;
+    } catch (error) {
+      return rejectedWithValue(error.message);
+    }
   }
 );
 

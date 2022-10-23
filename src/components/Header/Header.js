@@ -1,7 +1,7 @@
 import HeaderLayout from "./HeaderLayout";
 
-const Header = () => {
-  return <HeaderLayout />;
+const Header = ({ setIsUserDataLoaded }) => {
+  return <HeaderLayout setIsUserDataLoaded={setIsUserDataLoaded} />;
 };
 
 export default Header;

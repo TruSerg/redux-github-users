@@ -85,6 +85,10 @@
 
 @media (max-width: 880px) {
   .userWrapper {
+    flex-direction: column;
+  }
+
+  .userArea {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -101,11 +105,16 @@
   }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 500px) {
   .userWrapper {
     display: block;
     margin-bottom: 30px;
     text-align: center;
+  }
+
+  .userArea {
+    flex-direction: column;
+    margin-bottom: 30px;
   }
 
   .userImg {
