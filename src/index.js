@@ -7,7 +7,7 @@ import { store } from "./store";
 import App from "./App";
 import MainLayout from "./components/MainLayout/MainLayout";
 
-import "../src/styles/index.scss";
+import "./styles/index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
