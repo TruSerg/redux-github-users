@@ -41,8 +41,13 @@
   }
 
   .formInput {
-    max-width: 350px;
-    min-width: 0;
+    min-width: 300px;
     padding: 8px 8px 8px 35px;
+  }
+}
+
+@media (max-width: 395px) {
+  .formInput {
+    min-width: 230px;
   }
 }
