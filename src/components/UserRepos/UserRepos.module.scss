@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 66%;
-  min-height: 80vh;
+  min-height: 75vh;
   margin-left: 30px;
   position: relative;
 }
@@ -32,7 +32,7 @@
     width: 100%;
     min-height: 112px;
     word-wrap: break-word;
-    padding: 14px 32px 24px 32px;
+    padding: 20px;
     border-radius: 6px;
     margin-bottom: 24px;
     background-color: #fff;
@@ -42,8 +42,6 @@
     }
   }
 }
-
-
 
 .repoName {
   font-weight: 500;
@@ -84,10 +82,6 @@
     margin: 0 auto;
   }
 
-  .userRepoArea {
-    min-height: 80vh;
-  }
-
   .userRepo {
     width: 100%;
   }
@@ -105,12 +99,10 @@
 @media (max-width: 500px) {
   .reposTitle {
     font-size: 24px;
-    text-align: center;
     margin-bottom: 20px;
   }
 
   .userRepo {
-    min-height: 80px;
     padding: 10px;
     margin-bottom: 20px;
   }
